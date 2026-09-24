@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<!-- =====================================================================
+     contact.html  |  CPTR250 FINAL PROJECT — Contact
+     Demonstrates CHAPTER 5 (HTML Forms & Inputs):
+       - text, email, tel inputs   - select dropdown
+       - radio buttons             - checkboxes
+       - textarea                  - submit & reset buttons
+       - required validation, labels, placeholders
+     ===================================================================== -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | InsightHub Analytics</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="index.html" class="brand">Insight<span>Hub</span></a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero" style="padding:80px 8%;">
+        <h1>Get in <span>Touch</span></h1>
+        <p>Have a question or a project in mind? Fill out the form and we'll get back to you.</p>
+    </header>
+
+    <section>
+        <div class="form-wrap">
+            <!-- The FORM (Chapter 5). action="#" is a placeholder backend;
+                 method="post" is how real form data would be sent to a server. -->
+            <form action="#" method="post">
+
+                <!-- Text inputs, side by side -->
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstName">First Name *</label>
+                        <input type="text" id="firstName" name="firstName" placeholder="Juan" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name *</label>
+                        <input type="text" id="lastName" name="lastName" placeholder="Dela Cruz" required>
+                    </div>
+                </div>
+
+                <!-- Email + phone -->
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" placeholder="you@company.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+63 900 000 0000">
+                    </div>
+                </div>
+
+                <!-- Select dropdown -->
+                <div class="form-group">
+                    <label for="service">Service You're Interested In</label>
+                    <select id="service" name="service">
+                        <option value="" selected>-- Please choose an option --</option>
+                        <option value="analytics">Data Analytics</option>
+                        <option value="dashboards">BI Dashboards</option>
+                        <option value="automation">Process Automation</option>
+                        <option value="webdev">Web Development</option>
+                        <option value="consulting">Consulting</option>
+                    </select>
+                </div>
+
+                <!-- Radio buttons: budget range -->
+                <div class="form-group">
+                    <label>Project Budget</label>
+                    <div class="check-row"><input type="radio" id="b1" name="budget" value="small"><label for="b1" style="font-weight:400;margin:0;">Under ₱50,000</label></div>
+                    <div class="check-row"><input type="radio" id="b2" name="budget" value="medium"><label for="b2" style="font-weight:400;margin:0;">₱50,000 – ₱150,000</label></div>
+                    <div class="check-row"><input type="radio" id="b3" name="budget" value="large"><label for="b3" style="font-weight:400;margin:0;">Over ₱150,000</label></div>
+                </div>
+
+                <!-- Checkboxes: how did you hear about us -->
+                <div class="form-group">
+                    <label>How did you hear about us? (check all that apply)</label>
+                    <div class="check-row"><input type="checkbox" id="c1" name="source" value="search"><label for="c1" style="font-weight:400;margin:0;">Search engine</label></div>
+                    <div class="check-row"><input type="checkbox" id="c2" name="source" value="social"><label for="c2" style="font-weight:400;margin:0;">Social media</label></div>
+                    <div class="check-row"><input type="checkbox" id="c3" name="source" value="referral"><label for="c3" style="font-weight:400;margin:0;">Referral</label></div>
+                </div>
+
+                <!-- Textarea -->
+                <div class="form-group">
+                    <label for="message">Your Message *</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Tell us about your project..." required></textarea>
+                </div>
+
+                <!-- Consent checkbox -->
+                <div class="check-row">
+                    <input type="checkbox" id="consent" name="consent" required>
+                    <label for="consent" style="font-weight:400;margin:0;">I agree to be contacted about my inquiry. *</label>
+                </div>
+
+                <!-- Submit + Reset buttons -->
+                <button type="submit" class="btn">Send Message</button>
+                <button type="reset" class="btn" style="background:var(--gray);margin-left:10px;">Clear Form</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-grid">
+            <div><h4>InsightHub Analytics</h4><p style="max-width:260px; font-size:14px;">Turning your data into decisions, one insight at a time.</p></div>
+            <div><h4>Pages</h4><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="contact.html">Contact</a></div>
+            <div><h4>Contact</h4><a href="mailto:hello@insighthub.example">hello@insighthub.example</a><a href="#">+63 900 000 0000</a><a href="#">San Miguel, Bulacan, PH</a></div>
+        </div>
+        <div class="footer-bottom">&copy; 2026 InsightHub Analytics · Built by John Genesis Vargas Desiatco · CPTR250 Final Project</div>
+    </footer>
+
+</body>
+</html>
